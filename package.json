@@ -2,9 +2,11 @@
   "name": "socials",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://hokakede1.github.io",
   "dependencies": {
     "axios": "^0.16.2",
     "bulma": "^0.4.3",
+    "gh-pages": "^1.0.0",
     "node-sass-chokidar": "0.0.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -15,6 +17,8 @@
     "redux": "^3.7.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
